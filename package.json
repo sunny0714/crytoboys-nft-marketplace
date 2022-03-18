@@ -5,6 +5,7 @@
   "author": "devpavan04",
   "dependencies": {
     "@openzeppelin/contracts": "^3.4.1",
+    "@truffle/hdwallet-provider": "^2.0.4",
     "babel-polyfill": "6.26.0",
     "babel-preset-env": "1.7.0",
     "babel-preset-es2015": "6.24.1",
@@ -16,6 +17,7 @@
     "chai-as-promised": "7.1.1",
     "chai-bignumber": "3.0.0",
     "dayjs": "^1.10.4",
+    "dotenv": "^16.0.0",
     "ipfs-http-client": "^49.0.2",
     "react": "16.8.4",
     "react-bootstrap": "1.0.0-beta.5",
@@ -32,7 +34,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "compile": "truffle compile",
+    "migrate": "truffle migrate --network rinkeby_infura --reset",
+    "verify": "truffle run verify PolkaBridgeINO --network rinkeby_infura"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,6 +49,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "gh-pages": "^3.1.0",
+    "truffle-plugin-verify": "^0.5.24"
   }
 }
